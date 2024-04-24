@@ -16,8 +16,8 @@
     
     @if (isset($mensagem))
 
-      <div style="background-color:rgb(110, 62, 0);" class="alert alert-info" role="alert">
-        <p style="margin-left: 50%; font-size:20px">{{ $mensagem }}</p>
+      <div style="background-color:rgb(110, 62, 0);" class="alert alert-info mx-2" role="alert">
+        <p class="text-center text-lg">{{ $mensagem }}</p>
       </div>
       <div style="background-image: url({{ asset('assets/img/diario') }});
 
@@ -36,14 +36,20 @@ background-repeat:no-repeat;">
   <div class="card-body">
     <h3 class="card-title"> {{$diario->title}}</h3>
     
-    {{$diario->created_at}}
+    {{$diario->created_at->format('Y-m-d H:i')}}
     <br>
    <br>
+     <div class="d-flex">
     <a href="{{route('diario_show', $diario->id)}}" class="btn btn-primary">Visualizar</a>
-    <a href="#" class="btn btn-primary ml-3">Apagar</a>
+    <form action="{{ route('delete', ['id' => $diario->id])}}" method="post">
+      @csrf
+      @method('DELETE')
+
+<button type="submit" class="btn btn-primary ml-3">Apagar</button>    
+    </form>
     
   </div>
-  
+  </div>
 </div>
 
 <br>
@@ -52,4 +58,5 @@ background-repeat:no-repeat;">
 
 @endforeach
 @endif
+
 @endsection

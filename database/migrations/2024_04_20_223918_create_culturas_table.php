@@ -23,6 +23,7 @@ return new class extends Migration
             $table->unsignedInteger('nitrogen');
             $table->unsignedInteger('phosphorus');
             $table->unsignedInteger('potassium');
+            $table->string('img');
             $table->timestamps();
         });
     }
