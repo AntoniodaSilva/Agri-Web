@@ -41,4 +41,3 @@ Route::middleware([
 
     Route::get('/dashboard', [DadosController::class, 'exibirDados'])->name('exibirdados');
 });
-

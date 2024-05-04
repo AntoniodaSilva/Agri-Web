@@ -1,4 +1,3 @@
-
 @extends('layouts.admin.body')
         @section('titulo','Home')
 
@@ -21,3 +20,4 @@
 </form>
 
     @endsection
+
