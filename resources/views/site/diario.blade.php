@@ -30,6 +30,17 @@ background-repeat:no-repeat;">
     text-align:center;">
 
       </div>
+      <div style="background-image: url({{ asset('assets/img/diario') }});
+
+align-contents:center;
+height:800px; width:100%;
+
+background-repeat:no-repeat;">
+<div style="
+    color:white;
+    text-align:center;">
+ 
+      </div>
 @else
 @foreach($diario as $diario)
 <div class="card ml-1">

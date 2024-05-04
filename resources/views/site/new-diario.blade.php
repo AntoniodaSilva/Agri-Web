@@ -15,7 +15,6 @@
 </div>
 <br>
 <textarea name="text" id="text" class=" mx-5" cols="0" rows="80" style="width: 100%; padding-left:12px; padding-right:12px; font-size:20px; " >
-
    </textarea>
 </form>
 
