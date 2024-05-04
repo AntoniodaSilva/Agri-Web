@@ -4,8 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DadosController;
 use App\Http\Controllers\DiarioController;
 use App\Http\Controllers\CulturaController;
+use App\Http\Controllers\ChatController;
+
 use App\Http\Controllers\UserControllerController;
-use App\Models\Cultura;
+use App\Models\Chat;
 
 Route::get('/', function () {
     return view('site.index');
@@ -30,6 +32,9 @@ Route::get('/diario_store',[DiarioController::class,'Diario_store'])->name('diar
 Route::post('/diario_create', [DiarioController::class, 'Diario_create'])->name('diario_create');
 Route::put('/update/{id}',[DiarioController::class, 'Diario_update'])->name('diario_update');
 Route::delete('/delete{id}',[DiarioController::class,'delete'])->name('delete');
+/*Chat*/
+Route::post('/chat_create', [ChatController::class, 'chat_create'])->name('chat_create');
+Route::get('/chat_store',[ChatController::class,'chat_store'])->name('chat_store');
 
 
 /*Igor-Login/Register(Jetstream.Liveware)*/

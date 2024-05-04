@@ -89,4 +89,5 @@ public function Cultura_index(Cultura $diario){
             return redirect()->route('diario_index')->with('success', 'Registro excluído com sucesso!');
         }
 
+       
 }

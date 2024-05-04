@@ -19,28 +19,21 @@
       <div style="background-color:rgb(110, 62, 0);" class="alert alert-info mx-2" role="alert">
         <p class="text-center text-lg">{{ $mensagem }}</p>
       </div>
-      <div style="background-image: url({{ asset('assets/img/diario') }});
+      <style>
+    .background-image {
+        background-image: url('{{ asset("assets/img/diary.png") }}');
+        background-size: cover;
+        height: 110vh; /* Isso garante que a imagem de fundo cubra toda a tela */
+        width: 85%;
 
-align-contents:center;
-height:800px; width:100%;
+    }
+</style>
 
-background-repeat:no-repeat;">
-<div style="
-    color:white;
-    text-align:center;">
+<div class="background-image ml-5 mt-5">
 
-      </div>
-      <div style="background-image: url({{ asset('assets/img/diario') }});
+</div>
 
-align-contents:center;
-height:800px; width:100%;
 
-background-repeat:no-repeat;">
-<div style="
-    color:white;
-    text-align:center;">
- 
-      </div>
 @else
 @foreach($diario as $diario)
 <div class="card ml-1">
